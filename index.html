@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatcherBird - Professional Auto-Sampling for Hardware Synths</title>
+    <meta name="description" content="BatcherBird is an open-source alternative to commercial sampling tools. Built with Rust and Tauri for pristine audio quality and professional-grade batch sampling of vintage synthesizers.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                </svg>
+                <span class="logo-text">BatcherBird</span>
+            </div>
+            <nav class="nav">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#download" class="nav-link">Download</a>
+                <a href="docs.html" class="nav-link">Docs</a>
+                <button class="github-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    GitHub
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="badge">Open Source • Professional Grade</div>
+            <h1 class="hero-title">
+                Professional Auto-Sampling for
+                <span class="gradient-text">Hardware Synths</span>
+            </h1>
+            <p class="hero-description">
+                BatcherBird is the open-source alternative to commercial sampling tools. Built with Rust and Tauri for
+                pristine audio quality and professional-grade batch sampling of vintage synthesizers.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7,10 12,15 17,10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download Free
+                </button>
+                <button class="btn btn-outline">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    View on GitHub
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose BatcherBird?</h2>
+                <p class="section-description">
+                    Professional features that rival commercial tools, completely free and open source
+                </p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <svg class="feature-icon blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+                            <path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>
+                        </svg>
+                        <h3 class="feature-title">Professional Audio Quality</h3>
+                        <p class="feature-description">Studio-grade recording with pristine quality</p>
+                    </div>
+                    <ul class="feature-list">
+                        <li>32-bit float WAV export (studio standard)</li>
+                        <li>Sub-millisecond MIDI timing precision</li>
+                        <li>Automatic release tail capture</li>
+                        <li>Zero-dropout recording engine</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <svg class="feature-icon purple" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3"/>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                        </svg>
+                        <h3 class="feature-title">Hardware Synthesizer Support</h3>
+                        <p class="feature-description">Seamless integration with your vintage gear</p>
+                    </div>
+                    <ul class="feature-list">
+                        <li>Auto-detects MIDI and audio interfaces</li>
+                        <li>Tested with real hardware (Korg DW6000, Arturia MiniFuse)</li>
+                        <li>MIDI panic for stuck note recovery</li>
+                        <li>Professional timing and velocity control</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-header">
+                        <svg class="feature-icon green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/>
+                        </svg>
+                        <h3 class="feature-title">Batch Sampling</h3>
+                        <p class="feature-description">Automate your sampling workflow efficiently</p>
+                    </div>
+                    <ul class="feature-list">
+                        <li><strong>Range Recording</strong>: Sample entire octaves (C2-C6) automatically</li>
+                        <li><strong>Individual Notes</strong>: Precise single-note sampling</li>
+                        <li><strong>Progress Monitoring</strong>: Real-time feedback with note names</li>
+                        <li><strong>Persistent Streams</strong>: Ableton-style audio engine prevents corruption</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Screenshot placeholder -->
+            <div class="screenshot-section">
+                <img src="placeholder.svg" alt="BatcherBird Interface Screenshot" class="screenshot">
+                <p class="screenshot-caption">BatcherBird's intuitive interface for professional sampling workflows</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Open Source Section -->
+    <section class="open-source">
+        <div class="container">
+            <h2 class="section-title">Built for the Community</h2>
+            <p class="section-description">
+                BatcherBird is completely open source, built by musicians for musicians. No licensing fees, no restrictions
+                - just professional-grade sampling tools for everyone.
+            </p>
+            <div class="community-grid">
+                <div class="community-card">
+                    <svg class="community-icon blue" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    <h3 class="community-title">Open Source</h3>
+                    <p class="community-description">
+                        Built with Rust and Tauri for performance and reliability. Contribute, modify, and improve the
+                        codebase.
+                    </p>
+                </div>
+                <div class="community-card">
+                    <svg class="community-icon yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2"/>
+                    </svg>
+                    <h3 class="community-title">Community Driven</h3>
+                    <p class="community-description">
+                        Feature requests, bug reports, and contributions welcome. Built by the community, for the community.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="download" class="cta">
+        <div class="container">
+            <h2 class="section-title">Ready to Start Sampling?</h2>
+            <p class="section-description">
+                Download BatcherBird today and transform your vintage synthesizers into professional sample libraries.
+            </p>
+            <div class="cta-buttons">
+                <button class="btn btn-primary btn-large">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                        <polyline points="7,10 12,15 17,10"/>
+                        <line x1="12" y1="15" x2="12" y2="3"/>
+                    </svg>
+                    Download for macOS
+                </button>
+                <a href="docs.html" class="btn btn-outline btn-large">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                        <polyline points="15,3 21,3 21,9"/>
+                        <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                    Documentation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18V5l12-2v13"/>
+                        <circle cx="6" cy="18" r="3"/>
+                        <circle cx="18" cy="16" r="3"/>
+                    </svg>
+                    <span class="logo-text">BatcherBird</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </a>
+                    <a href="docs.html" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">Issues</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BatcherBird. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - BatcherBird</title>
+    <meta name="description" content="Complete documentation for BatcherBird - the open-source auto-sampling tool for hardware synthesizers.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="docs.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18V5l12-2v13"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <circle cx="18" cy="16" r="3"/>
+                </svg>
+                <a href="index.html" class="logo-text">BatcherBird</a>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#features" class="nav-link">Features</a>
+                <a href="index.html#download" class="nav-link">Download</a>
+                <button class="github-btn">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                    GitHub
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <nav class="docs-nav">
+                <div class="docs-nav-section">
+                    <h3 class="docs-nav-title">Getting Started</h3>
+                    <ul class="docs-nav-list">
+                        <li><a href="#installation" class="docs-nav-link">Installation</a></li>
+                        <li><a href="#quick-start" class="docs-nav-link">Quick Start</a></li>
+                        <li><a href="#requirements" class="docs-nav-link">Requirements</a></li>
+                    </ul>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <h3 class="docs-nav-title">Setup</h3>
+                    <ul class="docs-nav-list">
+                        <li><a href="#audio-setup" class="docs-nav-link">Audio Interface Setup</a></li>
+                        <li><a href="#midi-setup" class="docs-nav-link">MIDI Configuration</a></li>
+                        <li><a href="#synth-connection" class="docs-nav-link">Connecting Your Synth</a></li>
+                    </ul>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <h3 class="docs-nav-title">Sampling</h3>
+                    <ul class="docs-nav-list">
+                        <li><a href="#single-note" class="docs-nav-link">Single Note Sampling</a></li>
+                        <li><a href="#range-sampling" class="docs-nav-link">Range Sampling</a></li>
+                        <li><a href="#velocity-layers" class="docs-nav-link">Velocity Layers</a></li>
+                        <li><a href="#release-samples" class="docs-nav-link">Release Samples</a></li>
+                    </ul>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <h3 class="docs-nav-title">Advanced</h3>
+                    <ul class="docs-nav-list">
+                        <li><a href="#export-settings" class="docs-nav-link">Export Settings</a></li>
+                        <li><a href="#troubleshooting" class="docs-nav-link">Troubleshooting</a></li>
+                        <li><a href="#supported-hardware" class="docs-nav-link">Supported Hardware</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content">
+            <div class="docs-header">
+                <h1>BatcherBird Documentation</h1>
+                <p class="docs-description">
+                    Complete guide to using BatcherBird for professional hardware synthesizer sampling
+                </p>
+            </div>
+
+            <section id="installation" class="docs-section">
+                <h2>Installation</h2>
+                <p>BatcherBird is currently available for macOS. Download the latest release from the main page or GitHub releases.</p>
+                
+                <div class="code-block">
+                    <h4>System Requirements</h4>
+                    <ul>
+                        <li>macOS 10.15 (Catalina) or later</li>
+                        <li>Audio interface with MIDI I/O</li>
+                        <li>Hardware synthesizer with MIDI input</li>
+                        <li>At least 4GB RAM recommended</li>
+                    </ul>
+                </div>
+                
+                <div class="warning-box">
+                    <h4>⚠️ Security Notice</h4>
+                    <p>On first launch, macOS may show a security warning. Go to System Preferences > Security & Privacy > General and click "Open Anyway" to allow BatcherBird to run.</p>
+                </div>
+            </section>
+
+            <section id="quick-start" class="docs-section">
+                <h2>Quick Start</h2>
+                <ol class="numbered-list">
+                    <li>Connect your hardware synthesizer to your audio interface</li>
+                    <li>Connect MIDI cables from your interface to your synthesizer</li>
+                    <li>Launch BatcherBird</li>
+                    <li>Select your audio interface and MIDI device</li>
+                    <li>Choose a sampling mode (Single Note or Range)</li>
+                    <li>Press Record to start sampling</li>
+                </ol>
+            </section>
+
+            <section id="requirements" class="docs-section">
+                <h2>Requirements</h2>
+                
+                <h3>Hardware Requirements</h3>
+                <ul>
+                    <li><strong>Audio Interface</strong>: Any Core Audio compatible interface with line inputs</li>
+                    <li><strong>MIDI Interface</strong>: Built into most audio interfaces or separate USB MIDI interface</li>
+                    <li><strong>Synthesizer</strong>: Any hardware synth with MIDI input and audio output</li>
+                    <li><strong>Cables</strong>: MIDI cables and audio cables (1/4" or XLR depending on your setup)</li>
+                </ul>
+                
+                <h3>Tested Hardware</h3>
+                <div class="hardware-list">
+                    <div class="hardware-item">
+                        <h4>Audio Interfaces</h4>
+                        <ul>
+                            <li>Arturia MiniFuse series</li>
+                            <li>Focusrite Scarlett series</li>
+                            <li>PreSonus AudioBox series</li>
+                        </ul>
+                    </div>
+                    <div class="hardware-item">
+                        <h4>Synthesizers</h4>
+                        <ul>
+                            <li>Korg DW6000</li>
+                            <li>Roland Juno series</li>
+                            <li>Yamaha DX series</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="audio-setup" class="docs-section">
+                <h2>Audio Interface Setup</h2>
+                <p>BatcherBird uses Core Audio to interface with your audio hardware. Most professional audio interfaces will work out of the box.</p>
+                
+                <h3>Connection Steps</h3>
+                <ol class="numbered-list">
+                    <li>Connect your synthesizer's audio output to your interface's line inputs</li>
+                    <li>Set appropriate input levels (aim for -12dB to -6dB peaks)</li>
+                    <li>Launch BatcherBird and select your interface from the audio device menu</li>
+                    <li>Choose the correct input channels</li>
+                </ol>
+                
+                <div class="tip-box">
+                    <h4>💡 Pro Tip</h4>
+                    <p>Use balanced 1/4" cables when possible to reduce noise and interference, especially with longer cable runs.</p>
+                </div>
+            </section>
+
+            <section id="midi-setup" class="docs-section">
+                <h2>MIDI Configuration</h2>
+                <p>MIDI setup is crucial for BatcherBird to communicate with your synthesizer.</p>
+                
+                <h3>MIDI Connection</h3>
+                <ul>
+                    <li>Connect MIDI OUT from your interface to MIDI IN on your synthesizer</li>
+                    <li>Set your synthesizer to receive on MIDI channel 1 (or note the channel)</li>
+                    <li>In BatcherBird, select your MIDI output device</li>
+                    <li>Set the correct MIDI channel to match your synthesizer</li>
+                </ul>
+                
+                <h3>MIDI Settings</h3>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <h4>Velocity</h4>
+                        <p>Default velocity for note triggers (1-127)</p>
+                    </div>
+                    <div class="setting-item">
+                        <h4>Note Length</h4>
+                        <p>How long each note is held (in milliseconds)</p>
+                    </div>
+                    <div class="setting-item">
+                        <h4>Release Time</h4>
+                        <p>Additional recording time after note off for natural decay</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="synth-connection" class="docs-section">
+                <h2>Connecting Your Synth</h2>
+                
+                <div class="connection-diagram">
+                    <h3>Typical Setup</h3>
+                    <div class="diagram-box">
+                        <p><strong>Computer</strong> → USB → <strong>Audio Interface</strong> → MIDI OUT → <strong>Synthesizer</strong> → Audio OUT → <strong>Audio Interface</strong> → USB → <strong>Computer</strong></p>
+                    </div>
+                </div>
+                
+                <h3>Synthesizer Preparation</h3>
+                <ul>
+                    <li>Set synthesizer to MIDI channel 1 (or remember which channel)</li>
+                    <li>Disable local control if available</li>
+                    <li>Set up your desired sound/patch</li>
+                    <li>Adjust output levels for optimal recording</li>
+                </ul>
+            </section>
+
+            <section id="single-note" class="docs-section">
+                <h2>Single Note Sampling</h2>
+                <p>Perfect for sampling individual notes or testing your setup.</p>
+                
+                <h3>Steps</h3>
+                <ol class="numbered-list">
+                    <li>Select "Single Note" mode</li>
+                    <li>Choose the MIDI note to sample (C4 = 60)</li>
+                    <li>Set recording length and release time</li>
+                    <li>Click "Record" to capture the sample</li>
+                    <li>Review the waveform and adjust settings if needed</li>
+                </ol>
+                
+                <div class="tip-box">
+                    <h4>💡 Use Case</h4>
+                    <p>Single note sampling is ideal for testing levels, checking for clipping, and sampling special effects or percussive sounds.</p>
+                </div>
+            </section>
+
+            <section id="range-sampling" class="docs-section">
+                <h2>Range Sampling</h2>
+                <p>Automatically sample a range of notes - the core feature of BatcherBird.</p>
+                
+                <h3>Range Settings</h3>
+                <ul>
+                    <li><strong>Start Note</strong>: Lowest note to sample (e.g., C2)</li>
+                    <li><strong>End Note</strong>: Highest note to sample (e.g., C6)</li>
+                    <li><strong>Interval</strong>: Semitones between samples (1 = chromatic, 12 = octaves)</li>
+                </ul>
+                
+                <h3>Sampling Process</h3>
+                <p>BatcherBird will automatically:</p>
+                <ol class="numbered-list">
+                    <li>Send MIDI note on for each note in the range</li>
+                    <li>Record the audio response</li>
+                    <li>Send MIDI note off</li>
+                    <li>Continue recording for the release tail</li>
+                    <li>Move to the next note</li>
+                    <li>Export all samples when complete</li>
+                </ol>
+                
+                <div class="warning-box">
+                    <h4>⚠️ Important</h4>
+                    <p>Range sampling can take time depending on your settings. A chromatic sample from C2-C6 (49 notes) with 3-second samples will take approximately 2.5 minutes.</p>
+                </div>
+            </section>
+
+            <section id="velocity-layers" class="docs-section">
+                <h2>Velocity Layers</h2>
+                <p>Create multiple velocity layers for more realistic and dynamic samples.</p>
+                
+                <h3>Velocity Layer Settings</h3>
+                <ul>
+                    <li><strong>Number of Layers</strong>: How many velocity levels (1-8 recommended)</li>
+                    <li><strong>Velocity Range</strong>: Min/max velocity values</li>
+                    <li><strong>Distribution</strong>: Even spread or custom velocity points</li>
+                </ul>
+                
+                <div class="example-box">
+                    <h4>Example: 3 Velocity Layers</h4>
+                    <ul>
+                        <li>Layer 1: Velocity 40 (soft)</li>
+                        <li>Layer 2: Velocity 80 (medium)</li>
+                        <li>Layer 3: Velocity 120 (hard)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="release-samples" class="docs-section">
+                <h2>Release Samples</h2>
+                <p>Capture the natural release characteristics of your synthesizer.</p>
+                
+                <h3>Release Sample Types</h3>
+                <ul>
+                    <li><strong>Natural Release</strong>: Continue recording after note off</li>
+                    <li><strong>Forced Release</strong>: Trigger release samples separately</li>
+                </ul>
+                
+                <h3>Settings</h3>
+                <ul>
+                    <li><strong>Release Length</strong>: How long to record after note off</li>
+                    <li><strong>Threshold</strong>: Audio level below which to stop recording</li>
+                </ul>
+            </section>
+
+            <section id="export-settings" class="docs-section">
+                <h2>Export Settings</h2>
+                
+                <h3>Audio Format</h3>
+                <ul>
+                    <li><strong>Format</strong>: WAV (32-bit float recommended)</li>
+                    <li><strong>Sample Rate</strong>: Match your interface (44.1kHz, 48kHz, 96kHz)</li>
+                    <li><strong>Bit Depth</strong>: 32-bit float for maximum quality</li>
+                </ul>
+                
+                <h3>File Naming</h3>
+                <p>BatcherBird uses a consistent naming convention:</p>
+                <div class="code-block">
+                    <code>SynthName_NoteName_Velocity.wav</code>
+                    <p>Example: <code>DW6000_C4_v80.wav</code></p>
+                </div>
+                
+                <h3>Metadata</h3>
+                <p>Each sample includes embedded metadata:</p>
+                <ul>
+                    <li>MIDI note number</li>
+                    <li>Velocity value</li>
+                    <li>Root key information</li>
+                    <li>Loop points (if applicable)</li>
+                </ul>
+            </section>
+
+            <section id="troubleshooting" class="docs-section">
+                <h2>Troubleshooting</h2>
+                
+                <h3>Common Issues</h3>
+                
+                <div class="troubleshoot-item">
+                    <h4>No Audio Recording</h4>
+                    <ul>
+                        <li>Check audio interface connections</li>
+                        <li>Verify input levels in BatcherBird</li>
+                        <li>Ensure synthesizer is powered on and outputting audio</li>
+                        <li>Check macOS audio permissions</li>
+                    </ul>
+                </div>
+                
+                <div class="troubleshoot-item">
+                    <h4>MIDI Not Working</h4>
+                    <ul>
+                        <li>Verify MIDI cables are connected correctly</li>
+                        <li>Check MIDI channel settings on synthesizer</li>
+                        <li>Ensure MIDI interface is selected in BatcherBird</li>
+                        <li>Test with Audio MIDI Setup utility</li>
+                    </ul>
+                </div>
+                
+                <div class="troubleshoot-item">
+                    <h4>Clipped/Distorted Samples</h4>
+                    <ul>
+                        <li>Lower input gain on audio interface</li>
+                        <li>Reduce synthesizer output level</li>
+                        <li>Check for gain staging issues</li>
+                    </ul>
+                </div>
+                
+                <div class="troubleshoot-item">
+                    <h4>Stuck Notes</h4>
+                    <ul>
+                        <li>Use the MIDI panic button in BatcherBird</li>
+                        <li>Power cycle your synthesizer</li>
+                        <li>Check MIDI cable connections</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="supported-hardware" class="docs-section">
+                <h2>Supported Hardware</h2>
+                
+                <h3>Audio Interfaces</h3>
+                <p>BatcherBird works with any Core Audio compatible interface. Tested devices include:</p>
+                
+                <div class="hardware-grid">
+                    <div class="hardware-category">
+                        <h4>Budget Friendly</h4>
+                        <ul>
+                            <li>PreSonus AudioBox USB 96</li>
+                            <li>Behringer UMC22</li>
+                            <li>Focusrite Scarlett Solo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="hardware-category">
+                        <h4>Professional</h4>
+                        <ul>
+                            <li>Focusrite Scarlett 2i2/4i4</li>
+                            <li>Arturia MiniFuse 2/4</li>
+                            <li>MOTU M2/M4</li>
+                            <li>RME Babyface Pro FS</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h3>Tested Synthesizers</h3>
+                <div class="synth-grid">
+                    <div class="synth-category">
+                        <h4>Vintage Digital</h4>
+                        <ul>
+                            <li>Korg DW6000/8000</li>
+                            <li>Yamaha DX7/TX7</li>
+                            <li>Roland D-50</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="synth-category">
+                        <h4>Vintage Analog</h4>
+                        <ul>
+                            <li>Roland Juno-60/106</li>
+                            <li>Sequential Prophet-5</li>
+                            <li>Moog Minimoog</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="synth-category">
+                        <h4>Modern</h4>
+                        <ul>
+                            <li>Arturia MicroFreak</li>
+                            <li>Novation Bass Station II</li>
+                            <li>Korg Minilogue</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="tip-box">
+                    <h4>💡 Compatibility</h4>
+                    <p>Any synthesizer with MIDI input and audio output should work with BatcherBird. The key requirements are stable MIDI response and consistent audio output levels.</p>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2>Getting Help</h2>
+                <p>Need more help? Here are additional resources:</p>
+                
+                <ul>
+                    <li><strong>GitHub Issues</strong>: Report bugs or request features</li>
+                    <li><strong>Community</strong>: Join discussions about hardware sampling</li>
+                    <li><strong>Updates</strong>: Follow the project for new releases and features</li>
+                </ul>
+                
+                <div class="help-buttons">
+                    <a href="#" class="btn btn-outline">Report an Issue</a>
+                    <a href="#" class="btn btn-outline">Join Community</a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 18V5l12-2v13"/>
+                        <circle cx="6" cy="18" r="3"/>
+                        <circle cx="18" cy="16" r="3"/>
+                    </svg>
+                    <span class="logo-text">BatcherBird</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#" class="footer-link">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                        </svg>
+                    </a>
+                    <a href="docs.html" class="footer-link">Documentation</a>
+                    <a href="#" class="footer-link">Issues</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 BatcherBird. Open source under MIT License.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
