@@ -18,6 +18,9 @@ export default function Component() {
             <Link href="#features" className="text-slate-300 hover:text-white transition-colors">
               Features
             </Link>
+            <Link href="/blog" className="text-slate-300 hover:text-white transition-colors">
+              Blog
+            </Link>
             <Link href="#download" className="text-slate-300 hover:text-white transition-colors">
               Download
             </Link>
@@ -140,15 +143,6 @@ export default function Component() {
             </Card>
           </div>
 
-          {/* Screenshot placeholder */}
-          <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-8 text-center">
-            <img
-              src="/placeholder.svg?height=400&width=800"
-              alt="BatcherBird Interface Screenshot"
-              className="w-full max-w-4xl mx-auto rounded-lg shadow-2xl"
-            />
-            <p className="text-slate-400 mt-4">BatcherBird's intuitive interface for professional sampling workflows</p>
-          </div>
         </div>
       </section>
 
